@@ -1,0 +1,44 @@
+label {
+    position: relative;
+    background-color: blue;
+    left: -20px;
+    top: 0;    
+    border-radius: 50%;
+    font-size: 0;
+    padding: 3px;
+}
+
+label:before {
+    position: absolute;
+    left: 10px;
+    top:0px;
+    content: '';
+    background-color: green;
+    border-radius: 50%;
+    font-size: 0;  
+    padding: 3px;
+}
+
+label:after {
+    position: absolute;
+    left: 20px;
+    top: 0;
+    content: '';
+    background-color: grey;
+    border-radius: 50%;
+    font-size: 0;  
+    padding: 3px;
+}
+.htree-dot-icon {
+    /* width: 6px; */
+    display: flex;
+    height: auto;
+    align-items: center;
+    cursor: pointer;
+}
+.hidden {
+    display: none;
+}
+.toggle:checked ~ .toggle__menu {
+    display: block;
+}
