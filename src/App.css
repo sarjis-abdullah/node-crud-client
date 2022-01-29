@@ -42,3 +42,32 @@
 .table--row__data:last-child {
     flex-direction: row-reverse;
 }
+.App-header {
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+.primary-btn {
+  background-color: blue;
+  padding: 0.5rem;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+.danger-btn {
+  background-color: red;
+  padding: 0.5rem;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.secondary-btn {
+  background-color: green;
+  padding: 0.5rem;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.justify-self-end {
+  justify-self: end;
+}

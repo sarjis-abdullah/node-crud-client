@@ -42,3 +42,8 @@ label:after {
 .toggle:checked ~ .toggle__menu {
     display: block;
 }
+.table-header {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    padding: 2rem 0;
+}
