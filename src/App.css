@@ -71,3 +71,31 @@
 .justify-self-end {
   justify-self: end;
 }
+.relative {
+  position: relative;
+}
+.form-cta {
+  display: grid;
+  grid-template-columns: 12% 12%;
+}
+.disable-btn {
+  background-color: gray;
+  padding: 0.5rem;
+  color: white;
+  border: none;
+}
+.input-box {
+  outline: none;
+  padding: 0.5rem;
+}
+.category-form {
+  display: grid;
+  gap: .5rem;
+}
+.alert-btn {
+  background-color: yellowgreen;
+  padding: 0.5rem;
+  color: white;
+  border: none;  
+  cursor: pointer;
+}

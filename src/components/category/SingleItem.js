@@ -6,35 +6,35 @@ export default function SingleItem(props) {
   const [editMode, setEditMode] = useState(false);
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
-  
+
   useEffect(() => {
-      if (item && Object.keys(item).length) {
-        setName(item.name)
-        setDescription(item.description)
-      }
-  }, []);
+    if (item && Object.keys(item).length) {
+      setName(item.name);
+      setDescription(item.description);
+    }
+  }, [item]);
 
   const handleChanges = (e) => {
-    const val = e.target.value
+    const val = e.target.value;
     if (e.target.name === "name") {
-      setName(val)
-    }else if(e.target.name === "description"){
-      setDescription(val)
+      setName(val);
+    } else if (e.target.name === "description") {
+      setDescription(val);
     }
   };
-  const toggleEditMode = ()=> {
+  const toggleEditMode = () => {
     setEditMode((mode) => !mode);
-  }
-  const update = (item)=> {
+  };
+  const update = (item) => {
     console.log("Updated", item);
     toggleEditMode();
     updateItem({
       ...item,
       description,
-      name
-    })
-  }
-  
+      name,
+    });
+  };
+
   return (
     <tr className="table--row">
       <td className="table--row__data">
@@ -59,12 +59,15 @@ export default function SingleItem(props) {
         <div className="htree-dot-icon">
           <button
             className="secondary-btn"
-            onClick={() => editMode? update(item) : toggleEditMode()}
+            onClick={() => (editMode ? update(item) : toggleEditMode())}
           >
             {editMode ? "Update" : "Edit"}
           </button>
-          <button className="danger-btn" onClick={() => deleteItem(item)}>
-            Delete
+          <button
+            className={editMode ? "alert-btn" : "danger-btn"}
+            onClick={() => (!editMode ? deleteItem(item) : toggleEditMode())}
+          >
+            {editMode ? "Cancel" : "Delete"}
           </button>
           {/* <input type="checkbox" className="hidden toggle" id="1"/>
             <label for="1">hello</label>
